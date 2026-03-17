@@ -15,26 +15,34 @@ This is a basic project + tasks project built with:
 
 Running the frontend
 
-```cd frontend```
-```npm install```
-```npm run dev```
+```bash
+cd frontend
+npm install
+npm run dev```
 
 Running backend, first create a virtual environment to prevent version issues with python
 
 First:
-```cd backend```
+```bash
+cd backend
+```
 
 For windows:
-```python -m venv venv```
-```.\venv\Scripts\activate.bat```
+```bash
+python -m venv venv
+.\venv\Scripts\activate.bat```
 
 For mac:
-```python3 -m venv venv```
-```source venv/bin/activate```
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
 then:
-```pip install -r requirements.txt```
-```uvicorn main:app --reload --port 8000```
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
 
 Your frontend will be available at `http://localhost:3000` and the backend will be live at `http://localhost:8000`. 
 
@@ -56,8 +64,8 @@ components/
 
 lib/
 
--`types.ts`: Defined an interface for both project and tasks for type-safety in types.ts
--`auth.ts` and `auth-client.ts`: config files for auth
+- `types.ts`: Defined an interface for both project and tasks for type-safety in types.ts
+- `auth.ts` and `auth-client.ts`: config files for auth
 
 I've tried to keep code as modular as possible. I've defined cards for projects and tasks seperately and just pass data to them,
 and have rename and delete functionalites. Rendering the entire list and sorting and filtering happens in the list page. The root page
