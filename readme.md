@@ -1,6 +1,6 @@
 # Introduction
 
-This is a basic project + tasks project built with: 
+This is a basic project built with: 
 
 1. NextJs + typescript + tailwind for the frontend
 2. FastAPI for the backend
@@ -18,7 +18,8 @@ Running the frontend
 ```bash
 cd frontend
 npm install
-npm run dev```
+npm run dev
+```
 
 Running backend, first create a virtual environment to prevent version issues with python
 
@@ -30,7 +31,8 @@ cd backend
 For windows:
 ```bash
 python -m venv venv
-.\venv\Scripts\activate.bat```
+.\venv\Scripts\activate.bat
+```
 
 For mac:
 ```bash
@@ -56,6 +58,7 @@ app/
 - `[projects]`: A dynamic route where we pass the project id, that's retrieved from the params and used in the api to get a user's tasks. 
 - `signin`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signIn.email()`
 - `signup`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signUp.email()`
+
 components/
 
 - `auth`: contains auth related components like login and signup form
@@ -79,7 +82,7 @@ also shows changes based on if the user is authenticated or not.
 Nextjs is pretty opinionated with it's folder structure. FastAPI is more flexible, so I used a recommended folder structure 
 used in the industry. More information about it is present here: https://www.youtube.com/watch?v=Af6Zr0tNNdE&t=805s&pp=ygUUZmFzdHBhaSBweXRob24gc2NhbGU%3D
 
-`main.py`
+`main.py`: contains the entry for the fastapi app + CORS settings
 
 app/
 
