@@ -15,9 +15,9 @@ This is a basic project + tasks project built with:
 
 Running the frontend
 
-```cd frontend``
-```npm install```
-```npm run dev```
+```cd frontend
+npm install
+npm run dev```
 
 Running backend, first create a virtual environment to prevent version issues with python
 
@@ -25,8 +25,8 @@ First:
 ```cd backend```
 
 For windows:
-```python -m venv venv```
-```.\venv\Scripts\activate.bat```
+```python -m venv venv
+.\venv\Scripts\activate.bat```
 
 For mac:
 ```python3 -m venv venv```
@@ -43,10 +43,10 @@ Your frontend will be available at `http://localhost:3000` and the backend will 
 Frontend is a basic nextjs project. The folder structure is easy to explain. 
 
 app/
-    - `api/auth/[...all]`: A baked in route from better-auth, called a catch-all route to catch all auth related requests
-    - `[projects]`: A dynamic route where we pass the project id, that's retrieved from the params and used in the api to get a user's tasks. 
-    - `signin`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signIn.email()`
-    - s`ignup`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signUp.email()`
+- `api/auth/[...all]`: A baked in route from better-auth, called a catch-all route to catch all auth related requests
+- `[projects]`: A dynamic route where we pass the project id, that's retrieved from the params and used in the api to get a user's tasks. 
+- `signin`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signIn.email()`
+- `signup`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signUp.email()`
 components/
     - `auth`: contains auth related components like login and signup form
     - `ui`: contains unstyled generic ui components like button, form, divider
