@@ -1,3 +1,5 @@
+# Docker file not working
+
 services: 
   # db:
   #   image: postgres:latest
