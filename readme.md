@@ -15,9 +15,9 @@ This is a basic project + tasks project built with:
 
 Running the frontend
 
-```cd frontend
-npm install
-npm run dev```
+```cd frontend```
+```npm install```
+```npm run dev```
 
 Running backend, first create a virtual environment to prevent version issues with python
 
@@ -25,8 +25,8 @@ First:
 ```cd backend```
 
 For windows:
-```python -m venv venv
-.\venv\Scripts\activate.bat```
+```python -m venv venv```
+```.\venv\Scripts\activate.bat```
 
 For mac:
 ```python3 -m venv venv```
@@ -43,17 +43,21 @@ Your frontend will be available at `http://localhost:3000` and the backend will 
 Frontend is a basic nextjs project. The folder structure is easy to explain. 
 
 app/
+
 - `api/auth/[...all]`: A baked in route from better-auth, called a catch-all route to catch all auth related requests
 - `[projects]`: A dynamic route where we pass the project id, that's retrieved from the params and used in the api to get a user's tasks. 
 - `signin`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signIn.email()`
 - `signup`: Basic signin route, ui with shadcn and better-auth handles sign in through `wait authClient.signUp.email()`
 components/
-    - `auth`: contains auth related components like login and signup form
-    - `ui`: contains unstyled generic ui components like button, form, divider
-    - other: contains the project card, task card and lists that make the core functionality of the app
-lib
-    -`types.ts`: Defined an interface for both project and tasks for type-safety in types.ts
-    -`auth.ts` and `auth-client.ts`: config files for auth
+
+- `auth`: contains auth related components like login and signup form
+- `ui`: contains unstyled generic ui components like button, form, divider
+- other: contains the project card, task card and lists that make the core functionality of the app
+
+lib/
+
+-`types.ts`: Defined an interface for both project and tasks for type-safety in types.ts
+-`auth.ts` and `auth-client.ts`: config files for auth
 
 I've tried to keep code as modular as possible. I've defined cards for projects and tasks seperately and just pass data to them,
 and have rename and delete functionalites. Rendering the entire list and sorting and filtering happens in the list page. The root page
@@ -70,9 +74,10 @@ used in the industry. More information about it is present here: https://www.you
 `main.py`
 
 app/
-    - `api`: Contains seperate files for all the routes we need
-    - `core`: This is where I defined my config, which is pretty much just db url and the connection with the db
-    - `models`: Models for SQL alchemy to work with the db
+
+- `api`: Contains seperate files for all the routes we need
+- `core`: This is where I defined my config, which is pretty much just db url and the connection with the db
+- `models`: Models for SQL alchemy to work with the db
 
 The backend is pretty simple and doesn't have much to explain. It has basic routes for rename, create, delete. 
 
