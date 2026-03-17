@@ -15,7 +15,7 @@ This is a basic project + tasks project built with:
 
 Running the frontend
 
-```cd frontend
+```cd frontend``
 ```npm install```
 ```npm run dev```
 
