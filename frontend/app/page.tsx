@@ -13,7 +13,7 @@ export default async function Home(){
     if (session) {
         return (
             <div className="flex flex-col items-center justify-center py-2">
-                <h1 className="text-xl font-bold">You have logged in.</h1> 
+                <h1 className="text-xl font-bold">You are currenty logged in.</h1> 
                 <ProjectList/>     
             </div>      
         )

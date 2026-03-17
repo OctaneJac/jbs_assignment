@@ -77,7 +77,7 @@ export default function TaskCard({ task, onUpdate }: TaskCardProps) {
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg">{task.title}</CardTitle>
-          <div className="flex gap-2">
+          <div className="flex">
             <Badge variant={getPriorityColor(task.priority)}>{task.priority}</Badge>
             <Badge variant={getStatusColor(task.status)}>{task.status}</Badge>
           </div>

@@ -6,7 +6,7 @@ app = FastAPI(title="Project Management API", version="1.0.0")
 
 
 origins = [
-    "http://localhost:3000",  
+    "http://localhost:3000",
 ]
 
 app.add_middleware(

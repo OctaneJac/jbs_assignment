@@ -14,7 +14,8 @@ export default function ProjectList() {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || ''
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL
+  // console.log('API URL:', apiUrl)
   const { data: session } = authClient.useSession()
   const user_id = session?.user.id
 

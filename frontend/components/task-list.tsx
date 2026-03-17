@@ -76,7 +76,7 @@ export default function TaskList() {
     setTitle("");
     setDescription("");
     setDueDate("");
-    setPriority("medium");
+    setPriority("low");
     fetchTasks();
   }
 
