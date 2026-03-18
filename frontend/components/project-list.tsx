@@ -19,11 +19,20 @@ export default function ProjectList() {
   const { data: session } = authClient.useSession()
   const user_id = session?.user.id
 
-  const fetchProjects = () => {
-    fetch(`${apiUrl}/v1/projects`)
-      .then(res => res.json())
-      .then(data => setProjects(data))
-      .catch(err => console.error('Error fetching projects:', err))
+  async function fetchProjects()
+  {
+    try{
+      const res = await fetch(`${apiUrl}/v1/project`,
+      {
+        method: 'GET',
+        headers:{'content-type': 'application/json'},
+      })
+      const data = await res.json();
+      setProjects(data);
+      }
+    catch(error){
+      console.error('Error fetching projects:', error);
+                }
   }
 
   useEffect(() => {
